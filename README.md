@@ -12,30 +12,27 @@
 - `cv/Maciel_CV.pdf` — compiled CV, linked from the website. No photo on the CV, by convention.
 - `CV_Fábio_2026_en.docx` — original Word CV (kept for reference, excluded from git).
 
-## Publishing on GitHub Pages (free, the standard choice in academia)
+## Where it lives
 
-1. Create a GitHub account if needed, then create a new **public** repository named
-   exactly `YOURUSERNAME.github.io` (e.g. `fabiobmaciel.github.io`).
-2. In this folder, run:
+- **Site:** https://fabio-bm.github.io
+- **Repository:** https://github.com/Fabio-BM/Fabio-BM.github.io (GitHub Pages,
+  served from the `main` branch root)
+- The GitHub CLI (`gh`) on this machine is authenticated as `Fabio-BM`, so Claude
+  Code can push updates, manage the repo, etc.
+
+## Updating the site
+
+1. Edit the HTML/CSS files (and recompile the CV if it changed).
+2. Then:
 
    ```
-   git init
-   git add index.html research.html teaching.html contact.html assets cv/Maciel_CV.pdf cv/Maciel_CV.tex README.md .gitignore
-   git commit -m "Academic website and CV"
-   git branch -M main
-   git remote add origin https://github.com/YOURUSERNAME/YOURUSERNAME.github.io.git
-   git push -u origin main
+   git add -A
+   git commit -m "describe the update"
+   git push
    ```
 
-3. After a minute the site is live at `https://YOURUSERNAME.github.io`.
-4. To update later: edit files, recompile the CV if needed, then
-   `git add -A && git commit -m "update" && git push`.
-
-Once the site is live, add the URL to the CV header: in `cv/Maciel_CV.tex`,
-uncomment the website line in the header block and recompile.
-
-Alternative hosts that serve the same static folder: Netlify (drag-and-drop),
-Cloudflare Pages, or your university's personal page space.
+GitHub Pages redeploys automatically within about a minute of each push.
+A custom domain can be added later in the repository's Pages settings.
 
 ## Recompiling the CV
 
