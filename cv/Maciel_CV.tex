@@ -1,0 +1,230 @@
+% ======================================================================
+% Curriculum Vitae — Fábio Bentz Maciel
+% Style: standard economics academic CV (article class, Palatino,
+% small-caps section heads, right-aligned dates, minimal color).
+% Compile with pdflatex.
+% ======================================================================
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}          % Palatino text + math
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{navy}{RGB}{0,51,102}
+\hypersetup{colorlinks=true, urlcolor=navy, linkcolor=navy, citecolor=navy,
+            pdftitle={Fábio Bentz Maciel — Curriculum Vitae},
+            pdfauthor={Fábio Bentz Maciel}}
+\urlstyle{same}
+
+% --- Section formatting: small caps with a rule ------------------------
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{7pt}
+
+% --- Header/footer: name + page number from page 2 onward --------------
+\fancypagestyle{cvpages}{%
+  \fancyhf{}%
+  \fancyhead[L]{\small\scshape Fábio Bentz Maciel}%
+  \fancyhead[R]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}}
+\pagestyle{cvpages}
+
+% --- Entry helpers -----------------------------------------------------
+% \entry{Bold title}{dates}
+\newcommand{\entry}[2]{\noindent\textbf{#1}\hfill #2\par}
+% \subline{...} : block-indented description under an entry
+\newcommand{\subline}[1]{{\leftskip=1.1em\noindent #1\par}}
+% Publication list: hanging-indent items, no bullets
+\newenvironment{pubs}
+  {\begin{itemize}[leftmargin=1.5em,labelsep=0em,label={},itemsep=6pt,parsep=0pt,topsep=2pt]
+   \setlength{\itemindent}{-1.5em}}
+  {\end{itemize}}
+% Tight bullet list for descriptions
+\newenvironment{tightlist}
+  {\begin{itemize}[leftmargin=1.6em,itemsep=1pt,parsep=0pt,topsep=2pt]}
+  {\end{itemize}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+\begin{document}
+\thispagestyle{empty}
+
+% ======================= HEADER =======================================
+\begin{center}
+  {\LARGE\scshape Fábio Bentz Maciel}\\[6pt]
+  Department of Spatial Economics, School of Business and Economics\\
+  Vrije Universiteit Amsterdam\\
+  De Boelelaan 1105, 1081 HV Amsterdam, The Netherlands\\[3pt]
+  \href{mailto:f.bentzmaciel@vu.nl}{f.bentzmaciel@vu.nl}
+  % \,\textbullet\, \href{https://YOUR-SITE-URL}{YOUR-SITE-URL}  % <- uncomment once the website is live
+\end{center}
+\vspace{2pt}
+\hrule height 0.8pt
+
+% ======================= EDUCATION ====================================
+\section*{Education}
+
+\entry{Ph.D.\ in Economics, Vrije Universiteit Amsterdam}{2024 -- present}
+\begin{tightlist}
+  \item Department of Spatial Economics; funded by the
+        \href{https://data.snf.ch/grants/grant/212632}{Swiss National Science Foundation (Grant No.\ 212632)}
+  \item Supervisors: Steven Poelhekke and Joëlle Noailly
+\end{tightlist}
+
+\entry{M.Sc.\ in Economics, Universidade Federal Fluminense (UFF), Brazil}{2020 -- 2022}
+
+\entry{B.A.\ in Economics, Universidade Federal do Rio de Janeiro (UFRJ), Brazil}{2015 -- 2019}
+
+% ======================= FIELDS =======================================
+\section*{Research Interests}
+Development Economics, Environmental and Resource Economics, Economics of Education, Labor Economics
+
+% ======================= WORKING PAPERS ===============================
+\section*{Working Papers}
+
+\begin{pubs}
+  \item \href{https://www.ie.ufrj.br/images/IE/grupos/cede/tds/\%5bTD\%20179\%5d\%20MACIEL,\%20B.\%20F._\%20SANT'ANNA,\%20A.A._\%20WALTENBERG,\%20F.(2025).\%20Public\%20spending\%20and\%20pupils\%E2\%80\%99\%20achievement_\%20Evidence\%20from\%20public\%20elementary\%20schools\%20in\%20Brazil.pdf}{``Public Spending and Pupils' Achievement: Evidence from Public Elementary Schools in Brazil''}
+        (with Fábio Waltenberg and André Sant'Anna). CEDE Discussion Paper No.\ 179, 2025.
+\end{pubs}
+
+% ======================= WORK IN PROGRESS =============================
+\section*{Work in Progress}
+
+\begin{pubs}
+  \item ``Skills or Scars? The Legacy of Mining Booms on Firm and Worker Capabilities''
+        (with Erik Katovich and Steven Poelhekke). \textit{Lead author.}
+  \item ``Mines, Forests and Farms: Evidence from Brazil''
+        (with Ayse Nihal, Joëlle Noailly, and Steven Poelhekke). \textit{Lead author.}
+  \item ``Made in Brazil: Job Creation and Firm Performance Under a Local Content Requirement''
+        (with Erik Katovich). Funded by a
+        \href{https://steg.cepr.org/projects/can-natural-resources-promote-industrialisation-firms-competition-and-spillovers}{STEG Small Research Grant}.
+\end{pubs}
+
+% ======================= PRE-PHD PUBLICATIONS =========================
+\section*{Pre-PhD Publications and Technical Reports}
+
+\begin{pubs}
+  \item \href{https://ppe.ipea.gov.br/index.php/ppe/article/view/2347}{``Impactos da educação profissional no mercado de trabalho brasileiro''}
+        (with Romero Rocha). \textit{Pesquisa e Planejamento Econômico}, 54(3), 2024.
+        {\small [In Portuguese. English title: ``The Impacts of Vocational Education on the Brazilian
+        Labor Market.'']}
+  \item \href{https://repositorio.ipea.gov.br/entities/publication/3bdf95c0-b7ce-4535-8897-84e6aaaad57a}{``Um Fundeb mais progressivo: efeitos redistributivos da ponderação pelo nível socioeconômico e pela disponibilidade de recursos vinculados à educação''}
+        (with Adriano Senkevics, Maria Teresa Alves, and Victor Bridi).
+        IPEA Discussion Paper No.\ 3201, 2026.
+        {\small [In Portuguese. English title: ``A More Progressive FUNDEB: Redistributive Effects of
+        Weighting by Socioeconomic Status and by Earmarked Education Revenues.'']}
+  \item \href{https://repositorio.ipea.gov.br/entities/publication/c21a2df7-f16e-41e7-8417-d2fc37fb4fd3}{``Financiamento federal a estudantes: proposições para remodelagem do Fies, sua integração com renúncias e imunidades fiscais e extensão de seu alcance a cursos de EPT''}
+        (with Paulo Nascimento, Rafael Tavares, and Abigail Santos).
+        IPEA Discussion Paper No.\ 3074, 2024.
+        {\small [In Portuguese. English title: ``Federal Student Financing: Proposals to Redesign FIES,
+        Integrate It with Tax Exemptions and Immunities, and Extend It to Vocational and Technological
+        Education.'']}
+  \item \href{https://repositorio.ipea.gov.br/items/b5c10c30-ac96-45d4-a2e1-bbabbc9705b4}{``Domicílios unipessoais e pobreza no Brasil pós-pandemia''}
+        (with Pedro Souza). IPEA Technical Note No.\ 114, 2024.
+        {\small [In Portuguese. English title: ``Single-Person Households and Poverty in Post-Pandemic Brazil.'']}
+  \item \href{https://publications.iadb.org/pt/avaliacao-do-gasto-tributario-do-imposto-de-renda-dos-aposentados-no-brasil}{``Avaliação do gasto tributário do imposto de renda dos aposentados no Brasil''}
+        (with André Fritscher, Renata Café, Fernando Silveira, and Leonardo Alvim).
+        Inter-American Development Bank, Technical Note No.\ IDB-TN-2671, 2023.
+        {\small [In Portuguese. English title: ``Evaluating the Income-Tax Expenditure for Retirees in Brazil.'']}
+  \item \href{https://repositorio.ipea.gov.br/items/443efcc0-467d-4ba9-95d5-cc53eaf8654a}{``Desigualdade salarial no setor formal da economia brasileira: a importância dos componentes intrafirma, entre firmas e entre setores''}
+        (with Pedro Souza and Miguel Foguel).
+        \textit{Mercado de Trabalho: Conjuntura e Análise}, No.\ 76, IPEA, 2023.
+        {\small [In Portuguese. English title: ``Wage Inequality in Brazil's Formal Sector:
+        Within-Firm, Between-Firm, and Between-Sector Components.'']}
+  \item Co-author, social assistance chapter, in
+        \href{https://bandeira18.com.br/site/wp-content/uploads/2020/10/Maravilhosa_para_Todos_Politicas_para_o_Rio_de_Janeiro.pdf}{\textit{Maravilhosa para Todos: Políticas Públicas para o Rio de Janeiro}},
+        eds.\ Eduardo Bandeira de Mello, Andrea Gouvêa Vieira, and Ricardo Menezes Barboza, 2020.
+        {\small [In Portuguese. English title: ``Wonderful for All: Public Policies for Rio de Janeiro.'']}
+\end{pubs}
+
+% ======================= RESEARCH EXPERIENCE ==========================
+\section*{Research Experience}
+
+\entry{Research Assistant to Erik Katovich}{2022 -- 2023}
+\subline{Natural resources and local development in Brazil, using administrative data from the
+Ministry of Labor (RAIS) and the National Mining Agency (Cadastro Mineiro).}
+
+\entry{Researcher, Institute for Applied Economic Research (IPEA)}{2022 -- 2024}
+\subline{Research incentive grant. Labor-market inequality dynamics and higher-education financing,
+using administrative data from the Ministry of Labor (RAIS) and the National Education Development
+Fund (SIS-FIES).}
+
+\entry{Research Scholar, Fundação Euclides da Cunha (UFF)}{2021 -- 2022}
+\subline{Ex-ante and ex-post evaluation of cash-transfer programs in two municipalities of the state
+of Rio de Janeiro, under the project ``Renda Básica de Cidadania.''}
+
+\entry{Undergraduate Research Assistant (PIBIC/CNPq Fellowship), UFRJ}{2016 -- 2018}
+
+% ======================= POLICY EXPERIENCE ============================
+\section*{Policy and Consulting Experience}
+
+\entry{External Consultant, World Bank}{2025}
+\subline{Labor-market projections supporting Brazilian state governments' technical-education
+planning under the PROPAG program.}
+
+\entry{External Consultant, INEP (Brazilian Ministry of Education)}{2024 -- 2025}
+\subline{Built and consolidated the calculation routines for the indicators that determine the VAAR
+component of FUNDEB, Brazil's main K--12 education fund.}
+
+\entry{Consultant, UNESCO, for the Brazilian Ministry of Education}{2023 -- 2024}
+\subline{Simulated the redistributive consequences of adding socioeconomic and earmarked-revenue
+criteria to the allocation of federal K--12 education funding.}
+
+\entry{External Product Consultant, Inter-American Development Bank}{2021 -- 2022}
+\subline{Tax-incidence analysis using the PNADC household survey and Federal Revenue Service data.}
+
+\entry{Short-Term Consultant, Profissão Docente}{2021}
+\subline{Municipal-level assessment of teacher shortages in K--12 public education, matching
+teachers' qualifications to teaching assignments using INEP School Census microdata.}
+
+\entry{Intern, Brazilian Institute of Geography and Statistics (IBGE)}{2019}
+\subline{Automated data-collection and analysis routines in R for the team producing the Brazilian
+Monthly Retail Survey (PMC).}
+
+% ======================= TEACHING =====================================
+\section*{Teaching Experience}
+
+\entry{Teaching Assistant, Vrije Universiteit Amsterdam}{}
+\subline{Environmental and Resource Economics (M.Sc.\ STREEM)\hfill 2025, 2026}
+\subline{Spatial Econometrics\hfill 2026}
+\subline{Economics of Climate Change\hfill 2025}
+
+\entry{Teaching Assistant, Universidade Federal Fluminense (UFF)}{}
+\subline{Econometrics (undergraduate)\hfill 2021}
+
+\entry{Teaching Assistant, Universidade Federal do Rio de Janeiro (UFRJ)}{}
+\subline{Monetary Economics (undergraduate)\hfill 2019}
+
+% ======================= GRANTS =======================================
+\section*{Fellowships and Grants}
+
+\entry{Swiss National Science Foundation, doctoral funding (Grant No.\ 212632)}{2024 -- present}
+\entry{STEG Small Research Grant, CEPR (for ``Made in Brazil,'' with Erik Katovich)}{}
+
+% ======================= SERVICE ======================================
+\section*{Academic Service}
+
+\entry{Graduate Student Representative, Postgraduate Council, UFF}{2021 -- 2022}
+
+% ======================= SKILLS =======================================
+\section*{Skills and Languages}
+
+\entry{Programming}{}
+\subline{R and Stata (advanced); QGIS (geospatial analysis); Python, SQL, and SAS (basic); \LaTeX.}
+
+\entry{Languages}{}
+\subline{Portuguese (native); English (fluent); Spanish (intermediate).}
+
+\vfill
+\begin{center}
+  \footnotesize\itshape Last updated: August 2026
+\end{center}
+
+\end{document}

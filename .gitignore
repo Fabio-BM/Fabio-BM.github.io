@@ -1,0 +1,17 @@
+# Original Word CV and full-size photo — keep private
+*.docx
+/Fábio Maciel.jpg
+
+# LaTeX build artifacts
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.synctex.gz
+cv/page-*.jpg
+
+# Claude Code local settings
+.claude/
+
+# OS noise
+Thumbs.db
+desktop.ini
