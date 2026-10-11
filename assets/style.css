@@ -74,6 +74,28 @@ ul.papers li { margin-bottom: 1rem; padding-left: 1.25rem; text-indent: -1.25rem
 
 .interests { color: var(--muted); }
 
+/* Collapsible abstracts */
+.hint { color: var(--faint); font-size: 0.9rem; margin: -0.3rem 0 0.8rem; }
+details summary { cursor: pointer; list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary .paper-title { color: var(--navy); }
+details summary:hover .paper-title { text-decoration: underline; }
+details summary .paper-title::after {
+  content: " \25B8";
+  font-size: 0.8em;
+  color: var(--faint);
+}
+details[open] summary .paper-title::after { content: " \25BE"; }
+.abstract {
+  text-indent: 0;
+  margin: 0.6rem 0 0.4rem;
+  padding: 0.1rem 0 0.1rem 0.9rem;
+  border-left: 2px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .portrait {
   float: right;
   width: 170px;
