@@ -74,18 +74,21 @@ ul.papers li { margin-bottom: 1rem; padding-left: 1.25rem; text-indent: -1.25rem
 
 .interests { color: var(--muted); }
 
-/* Collapsible abstracts */
-.hint { color: var(--faint); font-size: 0.9rem; margin: -0.3rem 0 0.8rem; }
-details summary { cursor: pointer; list-style: none; }
-details summary::-webkit-details-marker { display: none; }
-details summary .paper-title { color: var(--navy); }
-details summary:hover .paper-title { text-decoration: underline; }
-details summary .paper-title::after {
-  content: " \25B8";
-  font-size: 0.8em;
-  color: var(--faint);
+/* Collapsible abstracts: a small "Abstract" toggle under each entry */
+ul.papers details { text-indent: 0; margin-top: 0.2rem; }
+ul.papers summary {
+  display: inline-block;
+  cursor: pointer;
+  list-style: none;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
 }
-details[open] summary .paper-title::after { content: " \25BE"; }
+ul.papers summary::-webkit-details-marker { display: none; }
+ul.papers summary::after { content: " \25B8"; font-size: 0.85em; }
+ul.papers details[open] summary::after { content: " \25BE"; }
+ul.papers summary:hover { text-decoration: underline; }
 .abstract {
   text-indent: 0;
   margin: 0.6rem 0 0.4rem;
@@ -95,6 +98,10 @@ details[open] summary .paper-title::after { content: " \25BE"; }
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+/* Pre-PhD block sits apart from the PhD research */
+section.pre-phd { margin-top: 4.5rem; }
+.section-intro { color: var(--faint); font-size: 0.95rem; margin-bottom: 1.2rem; }
 
 .portrait {
   float: right;
