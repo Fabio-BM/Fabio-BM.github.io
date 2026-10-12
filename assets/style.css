@@ -101,7 +101,6 @@ ul.papers summary:hover { text-decoration: underline; }
 
 /* Pre-PhD block sits apart from the PhD research */
 section.pre-phd { margin-top: 4.5rem; }
-.section-intro { color: var(--faint); font-size: 0.95rem; margin-bottom: 1.2rem; }
 
 .portrait {
   float: right;
